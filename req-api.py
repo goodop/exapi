@@ -118,9 +118,19 @@ def addFriend():
     params = {
         'apikey': apikey,
         'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772',
-        'authToken': "uc23h7f331c8819j90fa9182db42a6e26:aWF0OiAbmkjDI5OTM2MTU2MDAK..XPHmbRLsWjGxFdREHkon5Tfgh=", #change with your primary token
+        'authToken': "uc23h7f331c8819j90fa9182db42a6e26:aWF0Oi......", #change with your primary token
         'proxy': None,
-        'mid':'ufc0eee059b7f86392c88c1bf861c826a' #mid target
+        'mid':'' #mid target
     }
     response = session.get(url, params=params).json()
     print(response)
+
+if __name__ == '__main__':
+    print("Example 1: Getting QR Code")
+    getQR()
+
+    print("\nExample 2: Getting Email")
+    getEmail()
+
+    print("\nExample 3: Adding Friend Secondary")
+    addFriend()
