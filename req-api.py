@@ -132,5 +132,5 @@ if __name__ == '__main__':
     print("\nExample 2: Getting Email")
     getEmail()
 
-    print("\nExample 3: Adding Friend Secondary")
+    print("\nExample 3: Adding Friend")
     addFriend()
