@@ -117,7 +117,7 @@ def addFriend():
     url = f'{base_url}/addfriend'
     params = {
         'apikey': apikey,
-        'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772',
+        'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772', #change with secondary AppName if you want use secondary token
         'authToken': "uc23h7f331c8819j90fa9182db42a6e26:aWF0Oi......", #change with your primary token
         'proxy': None,
         'mid':'' #mid target
