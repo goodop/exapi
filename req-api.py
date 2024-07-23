@@ -125,6 +125,8 @@ def addFriend():
     response = session.get(url, params=params).json()
     print(response)
 
+#Download Timeline Post
+
 if __name__ == '__main__':
     print("Example 1: Getting QR Code")
     getQR()
