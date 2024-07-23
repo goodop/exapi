@@ -111,4 +111,16 @@ def getEmailV1():
         }
         response2 = session.get(url2, params=params2).json()
         print(response2)
-
+        
+#Add Friend
+def addFriend():
+    url = f'{base_url}/addfriend'
+    params = {
+        'apikey': apikey,
+        'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772',
+        'authToken': "uc23h7f331c8819j90fa9182db42a6e26:aWF0OiAbmkjDI5OTM2MTU2MDAK..XPHmbRLsWjGxFdREHkon5Tfgh=", #change with your primary token
+        'proxy': None,
+        'mid':'ufc0eee059b7f86392c88c1bf861c826a' #mid target
+    }
+    response = session.get(url, params=params).json()
+    print(response)
