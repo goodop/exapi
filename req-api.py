@@ -23,21 +23,18 @@ def getQR():
     params = {
         'apikey': apikey,
         'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
-        'certificate': '90a4c5f72e26642bd769b93aa9eeae361da47a2c06e8ca237a345efbf2a86c40',
-        'proxy': None,
+        'certificate': '',
+        'proxy': getProxies(), #use proxy for login
     }
     response = session.get(url, params=params).json()
-    print(response)
-    
+    print(response)   
     if response and response['status'] == 200:
         params2 = {
             'apikey': apikey,
             'session': response['result']['session']
         }
-        
         response2 = session.get(url2, params=params2).json()
         print(response2)
-        
         if response2 and 'authToken' in response2['result']:
             print(response2)
         else:
