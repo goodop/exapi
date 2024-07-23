@@ -7,7 +7,7 @@ apikey = 'forexecman'
 session = requests.Session()
 session.headers.update({'apikey': apikey, 'Content-Type': 'application/json'})
 
-
+#GET Random Proxy
 def getProxies():
     url = f'{base_url}/proxies'
     response = session.get(url).json()
@@ -16,7 +16,8 @@ def getProxies():
         return random.choice(proxies).split(':')[0]
     return None
 
-def getQR(): #Token V3
+#GET Auth Token V3
+def getQR():
     url = f'{base_url}/loginqr'
     url2 = f'{base_url}/reqpin'
     url3 = f'{base_url}/reqtoken'
@@ -43,6 +44,7 @@ def getQR(): #Token V3
     else:
         print(f"Error: {response.get('error', 'Unknown error')}")
 
+#GET Auth Token V1
 def getQRV1(): #Token V1
     url = f'{base_url}/loginqrv1'
     url2 = f'{base_url}/reqpinv1'
@@ -67,5 +69,26 @@ def getQRV1(): #Token V1
        else:
            response3 = session.get(url3, params=params2).json()
            print(response3)
+
+#GET Email with Auth Token V3
+def getEmail():
+    url = f'{base_url}/loginemail'
+    url2 = f'{base_url}/reqemailtoken'
+    params = {
+        'apikey': apikey,
+        'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
+        'certificate': '',
+        'email': '',
+        'password': '',
+        'proxy': None
+    }
+    response = session.get(url, params=params).json()
+    print(response)
+    if "pincode" in response['result']:
+        params2 = {
+            'apikey': apikey,
+        }
+        response2 = session.get(url2, params=params2).json()
+        print(response2)
 
 
