@@ -91,4 +91,24 @@ def getEmail():
         response2 = session.get(url2, params=params2).json()
         print(response2)
 
+#GET Email with Auth Token V1
+def getEmailV1():
+    url = f'{base_url}/loginemailv1'
+    url2 = f'{base_url}/reqemailtokenv1'
+    params = {
+        'apikey': apikey,
+        'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
+        'certificate': '',
+        'email': '',
+        'password': 'Askingang',
+        'proxy': None
+    }
+    response = session.get(url, params=params).json()
+    print(response)
+    if "pincode" in response['result']:
+        params2 = {
+            'apikey': apikey,
+        }
+        response2 = session.get(url2, params=params2).json()
+        print(response2)
 
