@@ -110,7 +110,8 @@ def getEmailV1():
         }
         response2 = session.get(url2, params=params2).json()
         print(response2)
-
+        
+#ADD Friend with Primary
 def exampleAddFriendPrimary():
     url = f'{base_url}/addfriend'
     params = {
@@ -123,6 +124,7 @@ def exampleAddFriendPrimary():
     response = session.get(url, params=params).json()
     print(response)
 
+#ADD Friend with Secondary
 def exampleAddFriendSecondary():
     url = f'{base_url}/addfriend'
     params = {
