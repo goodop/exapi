@@ -35,7 +35,6 @@ def getQR():
             'session': response['result']['session']
         }
         response2 = session.get(url2, params=params2).json()
-        print(response2)
         if response2 and 'authToken' in response2['result']:
             print(response2)
         else:
@@ -111,20 +110,32 @@ def getEmailV1():
         }
         response2 = session.get(url2, params=params2).json()
         print(response2)
-        
-#Add Friend
-def addFriend():
+
+def exampleAddFriendPrimary():
     url = f'{base_url}/addfriend'
     params = {
         'apikey': apikey,
-        'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772', #change with secondary AppName if you want use secondary token
-        'authToken': "uc23h7f331c8819j90fa9182db42a6e26:aWF0Oi......", #change with your primary token
+        'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772',
+        'authToken': "ugh23h7f331c8819j90fa9182db42a6e26:aWF0OiAbm....", #change with your primary token
         'proxy': None,
         'mid':'' #mid target
     }
     response = session.get(url, params=params).json()
     print(response)
-    
+
+def exampleAddFriendSecondary():
+    url = f'{base_url}/addfriend'
+    params = {
+        'apikey': apikey,
+        'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
+        'authToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2ODIxOTc5MC1kYWU3LTRjM2YtOWIzZC05OWRhZmU4MTdl...', # change with authtoken v1 or v3
+        'proxy': None,
+        'mid': '' #mid target
+    }
+    response = session.get(url, params=params).json()
+    print(response)
+
+
 #GET Friend Recomendation
 def friendRecomendation():
     url = f'{base_url}/friendrecomendation'
@@ -137,7 +148,33 @@ def friendRecomendation():
     response = session.get(url, params=params).json()
     print(response)
 
-#Download Timeline Post
+#Download Story
+def getStory():
+    url = f'{base_url}/linestory'
+    params = {
+        'apikey': apikey,
+        'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772', #change with secondary AppName if you want use Token V3
+        'authToken': "udd56d5cd664be5ecf20d47238b3a8a3d:F0OiAxMDI5OTM2NTkxMDAK...", #change with your primary token or auth token V3
+        'proxy': None,
+        'mid': 'ufed869bc1105aedd331665d57cea407d'
+    }
+    response = session.get(url, params=params).json()
+    print(response)
+
+#Download Post
+def getPost():
+    url = f'{base_url}/linepost'
+    urlp = 'https://line.me/R/home/post?userMid=ufed869bc1105aedd331665d57cea407d&postId=1172180403371226572'
+    params = {
+        'apikey': apikey,
+        'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772', #change with secondary AppName if you want use token V3
+        'authToken': "udd56d5cd664be5ecf20d47238b3a8a3d:F0OiAxMDI5OTM2NTkxMDAK...", #change with your primary token or auth token V3
+        'proxy': None,
+        'mid': urlp[36:69],
+        'postId': urlp.split("postId=")[1]
+    }
+    response = session.get(url, params=params).json()
+    print(response)
 
 if __name__ == '__main__':
     print("Example 1: Getting QR Code")
