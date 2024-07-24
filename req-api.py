@@ -186,4 +186,4 @@ if __name__ == '__main__':
     getEmail()
 
     print("\nExample 3: Adding Friend")
-    addFriend()
+    exampleAddFriendPrimary()
