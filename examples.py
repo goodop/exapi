@@ -1,5 +1,3 @@
-# usage_example
-
 from exapi import ExecrossAPI
 api = ExecrossAPI(base_url='https://execross.com/api/v3', apikey='forexecman')
 
