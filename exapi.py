@@ -116,3 +116,18 @@ class ExecrossAPI:
         url = f'{self.base_url}/convertparseurl'
         response = self.session.get(url, params=params).json()
         return response
+
+    def webp2mp4(self, params):
+        url = f'{self.base_url}/webp2mp4'
+        response = self.session.get(url, params=params).json()
+        return response
+
+    def mp42gif(self, params):
+        url = f'{self.base_url}/mp42gif'
+        response = self.session.get(url, params=params).json()
+        return response
+
+    def vid2Apng(self, params):
+        url = f'{self.base_url}/video2apng'
+        response = self.session.get(url, params=params).json()
+        return response
