@@ -44,5 +44,4 @@ def getQR():
               for key, value in response3['result'].items():
                   print(f"{key}: {value}")
 
-# Example call
 getQR()
