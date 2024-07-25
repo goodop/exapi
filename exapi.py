@@ -22,18 +22,16 @@ class ExecrossAPI:
         url3 = f'{self.base_url}/reqtoken'
         response = self.session.get(url, params=params).json()
         print(response)
-
         if response and response['status'] == 200:
             params2 = {
                 'apikey': self.apikey,
                 'session': response['result']['session']
             }
             response2 = self.session.get(url2, params=params2).json()
-            print(response2)
-
             if response2 and 'authToken' in response2['result']:
                 return response2
             else:
+                print(response2)
                 response3 = self.session.get(url3, params=params2).json()
                 return response3
         else:
@@ -51,10 +49,10 @@ class ExecrossAPI:
                 'session': response['result']['session']
             }
             response2 = self.session.get(url2, params=params2).json()
-            print(response2)
             if 'authToken' in response2['result']:
                 return response2
             else:
+                print(response2)
                 response3 = self.session.get(url3, params=params2).json()
                 return response3
         else:
