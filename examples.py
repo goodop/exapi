@@ -1,8 +1,7 @@
 from exapi import ExecrossAPI
 api = ExecrossAPI(base_url='https://execross.com/api/v3', apikey='forexecman')
 
-# Example 1: Getting QR Code
-print("Example 1: Getting QR Code")
+# Example 1: LINE Login QR Token V3
 proxy = api.getProxies()
 params_getqr = {
     'apikey': api.apikey,
@@ -13,8 +12,7 @@ params_getqr = {
 data = api.getQR(params_getqr)
 print(data)
 
-# Example 2: Getting QR V1
-print("\nExample 2: Getting QR V1")
+# Example 2: LINE Login QR V1
 params_getqrv1 = {
     'apikey': api.apikey,
     'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
@@ -24,8 +22,7 @@ params_getqrv1 = {
 data = api.getQRV1(params_getqrv1)
 print(data)
 
-# Example 3: Getting Email
-print("\nExample 3: Getting Email")
+# Example 3: LINE Login Email Token V3
 params_getemail = {
     'apikey': api.apikey,
     'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
@@ -37,8 +34,7 @@ params_getemail = {
 data = api.getEmail(params_getemail)
 print(data)
 
-# Example 4: Getting Email V1
-print("\nExample 4: Getting Email V1")
+# Example 4: LINE Login Email V1
 params_getemailv1 = {
     'apikey': api.apikey,
     'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
@@ -51,7 +47,6 @@ data = api.getEmailV1(params_getemailv1)
 print(data)
 
 # Example 5: Adding Line Friend With Primary
-print("\nExample 5: Adding Friend Primary")
 params_addfriendprimary = {
     'apikey': api.apikey,
     'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772',
@@ -63,7 +58,6 @@ data = api.exampleAddFriendPrimary(params_addfriendprimary)
 print(data)
 
 # Example 6: Adding Line Friend With Secondary
-print("\nExample 6: Adding Friend Secondary")
 params_addfriendsecondary = {
     'apikey': api.apikey,
     'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
@@ -75,7 +69,6 @@ data = api.exampleAddFriendSecondary(params_addfriendsecondary)
 print(data)
 
 # Example 7: Getting Story Line
-print("\nExample 7: Getting Story")
 params_getstory = {
     'apikey': api.apikey,
     'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772',
@@ -87,7 +80,6 @@ data = api.getStory(params_getstory)
 print(data)
 
 # Example 8: Getting Post Line
-print("\nExample 8: Getting Post")
 urlp = 'https://line.me/R/home/post?userMid=ufed869bc1105aedd331665d57cea407d&postId=1172180403371226572'
 params_getpost = {
     'apikey': api.apikey,
@@ -101,7 +93,6 @@ data = api.getPost(params_getpost)
 print(data)
 
 # Example 9: Line Friend Recommendation
-print("\nExample 9: Friend Recommendation")
 params_friendrecommendation = {
     'apikey': api.apikey,
     'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772',
@@ -112,7 +103,6 @@ data = api.friendRecomendation(params_friendrecommendation)
 print(data)
 
 # Example 10: Line Image Message ID to URL
-print("\nExample 10: Message ID to URL")
 params_messageidtourl = {
     'apikey': api.apikey,
     'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772',
@@ -124,10 +114,38 @@ data = api.messageIdToURL(params_messageidtourl)
 print(data)
 
 # Example 11: Convert Parse URL to Image Extension (.jpg)
-print("\nExample 11: Convert Parse URL to Extension")
 params_convertparseurl = {
     'apikey': api.apikey,
     'parseURL': "https://obs-us.line-apps.com/myhome/h/download.nhn?oid=d4905e97265d26bd395e157ccaf63621248b311t13dccbea"
 }
 data = api.convertParseUrlToExtension(params_convertparseurl)
+print(data)
+
+# Example 12: Getting webp2mp4
+params_webp2mp4 = {
+    'apikey': api.apikey,
+    'url': 'https://colinbendell.github.io/webperf/animated-gif-decode/4.webp'
+}
+data = api.webp2mp4(params_webp2mp4)
+print(data)
+
+# Example 13: Getting mp42gif
+params_mp42gif = {
+    'apikey': api.apikey,
+    'url': 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4',  # URL of the MP4 video
+    'start': '0',  # Start time in seconds
+    'end': '10',   # End time in seconds (change to None for default behavior) / Max = 30secs
+    'transparent': False  # Set to True for transparent background (original mp4 must be transparent)
+}
+data = api.mp42gif(params_mp42gif)
+print(data)
+
+# Example 14: Getting vid2apng
+params_vid2apng = {
+    'apikey': api.apikey,  # Your API key
+    'start': '0',  # Start time in seconds
+    'end': '10',   # End time in seconds (change to None for default behavior) / Max = 30secs
+    'url': 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4'  # Etc.(MP4, WebM, AVI, MPEG, FLV, OGG, MOV, 3GP)
+}
+data = api.vid2Apng(params_vid2apng)
 print(data)
