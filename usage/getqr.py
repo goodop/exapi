@@ -2,29 +2,29 @@ import requests
 import json
 import random
 
-base_url = 'https://execross.com/api/v3'  # Corrected base URL
+base_url = 'https://execross.com/api/v3'
 apikey = 'forexecman'
 session = requests.Session()
 session.headers.update({'apikey': apikey, 'Content-Type': 'application/json'})
 
 def getProxies():
     endpoint = f'{base_url}/proxies'
-    response = session.get(endpoint).json()  # Changed to GET request
+    response = session.get(endpoint).json()
     if response and response['status'] == 200:
        proxies = response['result']['proxies']
        return random.choice(proxies).split(':')[0]
     return None
 
 def getQR():
+    proxy = getProxies()
     url = f'{base_url}/loginqr'
     url2 = f'{base_url}/reqpin'
     url3 = f'{base_url}/reqtoken'
-    proxy = getProxies()
     params = {
         'apikey': apikey,
         'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
         'certificate': '',
-        'proxy': proxy
+        'proxy': proxy,
     }
     response = session.get(url, params=params).json()
     if response['status'] == 200:
@@ -44,4 +44,3 @@ def getQR():
               for key, value in response3['result'].items():
                   print(f"{key}: {value}")
 
-getQR()
