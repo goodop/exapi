@@ -19,12 +19,12 @@ def getQR():
     url = f'{base_url}/loginqr'
     url2 = f'{base_url}/reqpin'
     url3 = f'{base_url}/reqtoken'
+    proxy = getProxies()
     params = {
         'apikey': apikey,
         'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
         'certificate': '',
-        'proxy': None,
-        'apptype': None
+        'proxy': proxy
     }
     response = session.get(url, params=params).json()
     if response['status'] == 200:
