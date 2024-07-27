@@ -155,7 +155,7 @@ params_smuledl = {
     'apikey': api.apikey,
     'url': 'https://www.smule.com/recording/vita-alvia-singkong-dan-keju-dj-remix/489839279_4906184190?channel=Copy-Link'
 }
-data = api.smuledl(params_smuledl)
+data = api.smulePost(params_smuledl)
 print(data)
 
 "Example 16: Download Instagram Post"
@@ -166,7 +166,7 @@ params_instapost = {
 data = api.instagramPost(params_instapost)
 print(data)
 
-"Example 17: Download Instagram Story")
+"Example 17: Download Instagram Story"
 params_instastorie = {
     'apikey': api.apikey,
     'userid': 'asking.ang' # User ID or Story Link
