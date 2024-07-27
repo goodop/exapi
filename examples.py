@@ -142,10 +142,34 @@ print(data)
 
 # Example 14: Getting vid2apng
 params_vid2apng = {
-    'apikey': api.apikey,  # Your API key
+    'apikey': api.apikey,
     'start': '0',  # Start time in seconds
     'end': '10',   # End time in seconds (change to None for default behavior) / Max = 30secs
     'url': 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4'  # Etc.(MP4, WebM, AVI, MPEG, FLV, OGG, MOV, 3GP)
 }
 data = api.vid2Apng(params_vid2apng)
+print(data)
+
+"Example 15: Download smule post"
+params_smuledl = {
+    'apikey': api.apikey,
+    'url': 'https://www.smule.com/recording/vita-alvia-singkong-dan-keju-dj-remix/489839279_4906184190?channel=Copy-Link'
+}
+data = api.smuledl(params_smuledl)
+print(data)
+
+"Example 16: Download Instagram Post"
+params_instapost = {
+    'apikey': api.apikey,
+    'url': 'https://www.instagram.com/reel/C7smdNZoY3M/?igsh=MXVzNzc1c3RhZDhiNA==' # Instagram Post, Reels / IGTV
+}
+data = api.instagramPost(params_instapost)
+print(data)
+
+"Example 17: Download Instagram Story")
+params_instastorie = {
+    'apikey': api.apikey,
+    'userid': 'asking.ang' # User ID or Story Link
+}
+data = api.instaStory(params_instastorie)
 print(data)
