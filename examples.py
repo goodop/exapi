@@ -161,7 +161,7 @@ print(data)
 "Example 16: Download Instagram Post"
 params_instapost = {
     'apikey': api.apikey,
-    'url': 'https://www.instagram.com/reel/C7smdNZoY3M/?igsh=MXVzNzc1c3RhZDhiNA==' # Instagram Post, Reels / IGTV
+    'url': 'https://www.instagram.com/p/CMZ8rozlRXD/?igsh=MWdyaXRmaXp0bThxNg==' # Instagram Post, Reels / IGTV
 }
 data = api.instagramPost(params_instapost)
 print(data)
