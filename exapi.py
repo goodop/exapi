@@ -131,3 +131,18 @@ class ExecrossAPI:
         url = f'{self.base_url}/video2apng'
         response = self.session.get(url, params=params).json()
         return response
+
+    def smuledl(self, params):
+        url = f'{self.base_url}/smuledl'
+        response = self.session.get(url, params=params).json()
+        return response
+
+    def instagramPost(self, params):
+        url = f'{self.base_url}/instapost'
+        response = self.session.get(url, params=params).json()
+        return response
+
+    def instaStory(self, params):
+        url = f'{self.base_url}/instastory'
+        response = self.session.get(url, params=params).json()
+        return response
