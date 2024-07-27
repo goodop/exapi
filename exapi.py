@@ -142,7 +142,7 @@ class ExecrossAPI:
         response = self.session.get(url, params=params).json()
         return response
 
-    def instaStory(self, params):
+    def instagramStory(self, params):
         url = f'{self.base_url}/instastory'
         response = self.session.get(url, params=params).json()
         return response
