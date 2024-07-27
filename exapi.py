@@ -132,8 +132,8 @@ class ExecrossAPI:
         response = self.session.get(url, params=params).json()
         return response
 
-    def smuledl(self, params):
-        url = f'{self.base_url}/smuledl'
+    def smulePost(self, params):
+        url = f'{self.base_url}/smulepost'
         response = self.session.get(url, params=params).json()
         return response
 
