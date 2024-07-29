@@ -156,3 +156,8 @@ class ExecrossAPI:
         url = f'{self.base_url}/getxpost'
         response = self.session.get(url, params=params).json()
         return response
+
+    def downloadFacebook(self,params):
+        url = f'{self.base_url}/facebookdl'
+        response = self.session.get(url, params=params).json()
+        return response
