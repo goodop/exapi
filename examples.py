@@ -150,7 +150,7 @@ params_vid2apng = {
 data = api.vid2Apng(params_vid2apng)
 print(data)
 
-"Example 15: Download smule post"
+# Example 15: Download smule post
 params_smuledl = {
     'apikey': api.apikey,
     'url': 'https://www.smule.com/recording/vita-alvia-singkong-dan-keju-dj-remix/489839279_4906184190?channel=Copy-Link'
@@ -158,7 +158,7 @@ params_smuledl = {
 data = api.smulePost(params_smuledl)
 print(data)
 
-"Example 16: Download Instagram Post"
+# Example 16: Download Instagram Post
 params_instapost = {
     'apikey': api.apikey,
     'url': 'https://www.instagram.com/p/CMZ8rozlRXD/?igsh=MWdyaXRmaXp0bThxNg==' # Instagram Post, Reels / IGTV
@@ -166,10 +166,27 @@ params_instapost = {
 data = api.instagramPost(params_instapost)
 print(data)
 
-"Example 17: Download Instagram Story"
+# Example 17: Download Instagram Story
 params_instastorie = {
     'apikey': api.apikey,
     'userid': 'asking.ang' # User ID or Story Link
 }
 data = api.instaStory(params_instastorie)
 print(data)
+
+# Example 18: View Instagram Stalker
+params_instastorie = {
+    'apikey': api.apikey,
+    'userid': 'this.ang'
+}
+data = api.instaStalker(params_instastorie)
+print(data)
+
+# Example 19: Download Twitter/X Post
+params_twitterpost = {
+    'apikey': api.apikey,
+    'url': 'https://x.com/NASA/status/1816862466816496101?t=VAW_bUjPQgCKbxqrovVa6A&s=19'
+}
+data = api.downloadXpost(params_twitterpost)
+print(data)
+
