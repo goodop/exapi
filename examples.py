@@ -190,3 +190,11 @@ params_twitterpost = {
 data = api.downloadXpost(params_twitterpost)
 print(data)
 
+# Example 20: Download Facebook Post
+params_fbpost = {
+    'apikey': api.apikey,
+    'url': 'https://www.facebook.com/share/r/aYSqb2vVTUrRqaTG/?mibextid=0VwfS7'
+}
+data = api.downloadFacebook(params_fbpost)
+print(data)
+
