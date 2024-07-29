@@ -146,3 +146,13 @@ class ExecrossAPI:
         url = f'{self.base_url}/instastory'
         response = self.session.get(url, params=params).json()
         return response
+
+    def instaStalker(self,params):
+        url = f'{self.base_url}/instastalker'
+        response = self.session.get(url, params=params).json()
+        return response
+
+    def downloadXpost(self,params): #Twitter
+        url = f'{self.base_url}/getxpost'
+        response = self.session.get(url, params=params).json()
+        return response
