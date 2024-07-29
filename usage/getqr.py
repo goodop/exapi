@@ -55,7 +55,7 @@ getQR()
 
 Response: {
   "creator": "EXECROSS",
-  "ip": "45.77.252.122",
+  "ip": "45.34.343.122",
   "proxy": "177.113.133.103",
   "result": {
     "session": "SQ36506d51696d48634e77575076567a734f57595a317a49644678397055626847",
@@ -66,7 +66,7 @@ Response: {
 
 Response2: {
   "creator": "EXECROSS",
-  "ip": "45.77.252.122",
+  "ip": "45.34.343.122",
   "result": {
     "pin": "448555"
   },
@@ -76,7 +76,7 @@ Response2: {
 
 Response3:  {
     'creator': 'EXECROSS',
-    'ip': '45.77.252.122',
+    'ip': '45.34.343.122',
     'result': {
         'authToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJlZDRmMDRlZi05OGU1LTQwZGItODc1YS03Yjc1YzFkMDYwZTYiLCJhdWQiOiJMSU5FIiwiaWF0IjoxNzIyMjYwODE0LCJleHAiOjE3MjI4NjU2MTQsInNjcCI6IkxJTkVfQ09SRSIsInJ0aWQiOiJiZGY3ZmQyZi0zMDQ1LTQwMTUtYjA5Ni03NGQyMDA2YTEwM2EiLCJyZXhwIjoxNzUzNzk2ODE0LCJ2ZXIiOiIzLjAiLCJhaWQiOiJ1MTJlOGRmNGE2ZTZjNzJlZjYyZmY3YjgzODZiZDMwNTIiLCJsc2lkIjoiZDg5YTJmMmYtYzg2OC00OTNjLWFkODItMzI2NTdmYzI2M2Y0IiwiZGlkIjoiTk9ORSIsImN0eXBlIjoiREVTS1RPUF9NQUMiLCJjbW9kZSI6IlNFQ09OREFSWSIsImNpZCI6IjAxMDAwMDAwMDAifQ.KxEYv0uX2Pe1o8z0rx1GnD2xOzpEAGpe9raOsPM61vY',
         'certificate': '88a895ec0d3738d49b567f79a555ec43e1443a360c5313c249106775e578c4cc',
