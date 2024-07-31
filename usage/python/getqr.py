@@ -27,7 +27,8 @@ def getQR():
         'proxy': proxy,
     }
     response = session.get(url, params=params).json()
-    print("Response: ",response)
+    data = json.dumps(response, indent=4)
+    print("Response: ", data)
     if response['status'] == 200:
        print(f"Please scan this Qode on your smartphone: {response['result']['url']}")
        params2 = {
@@ -35,14 +36,16 @@ def getQR():
            'session': response['result']['session']
        }
        response2 = session.get(url2, params=params2).json()
-       print("Response2: ", response2)
+       data2 = json.dumps(response2, indent=4)
+       print("Response2: ", data2)
        if 'authToken' in response2['result']:
           for key, value in response2['result'].items():
               print(f"{key}: {value}")
        else:
-           print(f"please input this PIN: {response2['result']['pin']}")
+           print(f"please input this PIN: {response2['result']['pincode']}")
            response3 = session.get(url3, params=params2).json()
-           print("response3: ", response3)
+           data3 = json.dumps(response3, indent=4)
+           print("response3: ", data3)
            if response3['status'] == 200:
               for key, value in response3['result'].items():
                   print(f"{key}: {value}")
@@ -51,40 +54,41 @@ def getQR():
 
 getQR()
 
-# Result will be:
+# Response will be:
 
-Response: {
-  "creator": "EXECROSS",
-  "ip": "45.34.343.122",
-  "proxy": "177.113.133.103",
-  "result": {
-    "session": "SQ36506d51696d48634e77575076567a734f57595a317a49644678397055626847",
-    "url": "https://gate.execross.com/images/qrcode_1722260528.301999.png"
-  },
-  "status": 200
+Response:  {
+    "creator": "EXECROSS",
+    "ip": "56.77.752.122",
+    "proxy": "168.237.194.18",
+    "result": {
+        "barcode": "https://gate.execross.com/images/qrcode_1722428691.5508652.png",
+        "session": "SQ504b5a4d5a727a38616648416c63313552307337386d6d6f563554367a427a65",
+        "url": "https://line.me/R/au/lgn/sq/SQ504b5a4d5a727a38616648416c63313552307337386d6d6f563554367a427a65?secret=cJOKwatDulR9hm073rpdeOCByqHc2lwHxgtaYvgsMFQ%3D&e2eeVersion=1"
+    },
+    "status": 200
 }
 
-Response2: {
-  "creator": "EXECROSS",
-  "ip": "45.34.343.122",
-  "result": {
-    "pin": "448555"
-  },
-  "status": 200
+Response2:  {
+    "creator": "EXECROSS",
+    "ip": "56.77.752.122",
+    "result": {
+        "pincode": "571387"
+    },
+    "status": 200
 }
 
-
-Response3:  {
-    'creator': 'EXECROSS',
-    'ip': '45.34.343.122',
-    'result': {
-        'authToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJlZDRmMDRlZi05OGU1LTQwZGItODc1YS03Yjc1YzFkMDYwZTYiLCJhdWQiOiJMSU5FIiwiaWF0IjoxNzIyMjYwODE0LCJleHAiOjE3MjI4NjU2MTQsInNjcCI6IkxJTkVfQ09SRSIsInJ0aWQiOiJiZGY3ZmQyZi0zMDQ1LTQwMTUtYjA5Ni03NGQyMDA2YTEwM2EiLCJyZXhwIjoxNzUzNzk2ODE0LCJ2ZXIiOiIzLjAiLCJhaWQiOiJ1MTJlOGRmNGE2ZTZjNzJlZjYyZmY3YjgzODZiZDMwNTIiLCJsc2lkIjoiZDg5YTJmMmYtYzg2OC00OTNjLWFkODItMzI2NTdmYzI2M2Y0IiwiZGlkIjoiTk9ORSIsImN0eXBlIjoiREVTS1RPUF9NQUMiLCJjbW9kZSI6IlNFQ09OREFSWSIsImNpZCI6IjAxMDAwMDAwMDAifQ.KxEYv0uX2Pe1o8z0rx1GnD2xOzpEAGpe9raOsPM61vY',
-        'certificate': '88a895ec0d3738d49b567f79a555ec43e1443a360c5313c249106775e578c4cc',
-        'e2eeVersion': '1',
-        'keyId': '4905823',
-        'privKey': 'iJ1/gdLLWcMQ4/ZmhpUGZuQb0Q2Wt+QohO386JX133c=',
-        'pubKey': '73qZFPG0YwcJ4PtbQ3ty5X3Itl7PRx4ZQdhUaSl+UDI=',
-        'refreshToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiZGY3ZmQyZi0zMDQ1LTQwMTUtYjA5Ni03NGQyMDA2YTEwM2EiLCJhdGkiOiJlZDRmMDRlZi05OGU1LTQwZGItODc1YS03Yjc1YzFkMDYwZTYiLCJhdWQiOiJMSU5FIiwicm90IjoiU1RBVElDIiwiaWF0IjoxNzIyMjYwODE0LCJleHAiOjE3NTM3OTY4MTQsInNjcCI6IkxJTkVfQ09SRSIsInZlciI6IjMuMCIsImFpZCI6InUxMmU4ZGY0YTZlNmM3MmVmNjJmZjdiODM4NmJkMzA1MiIsImxzaWQiOiJkODlhMmYyZi1jODY4LTQ5M2MtYWQ4Mi0zMjY1N2ZjMjYzZjQiLCJkaWQiOiJOT05FIiwiYXBwSWQiOiIwMTAwMDAwMDAwIn0.3t-LPUGmhO1NiInmZhL0pC-Dj0dgTZE-FNaDg-H8sSY'},
-    'status': 200
+response3:  {
+    "creator": "EXECROSS",
+    "ip": "56.77.752.122",
+    "result": {
+        "authToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2ZWVhMzM5Mi1hOGNiLTRiZGUtOTQ1Yy0yZWIzODhhYWE2NTgiLCJhdWQiOiJMSU5FIiwiaWF0IjoxNzIyNDI4NzI5LCJleHAiOjE3MjMwMzM1MjksInNjcCI6IkxJTkVfQ09SRSIsInJ0aWQiOiJhMDY4YjVjMi01MDE0LTQ2MjgtYmQ3NS03ZmZkYmMyYjc2ZGQiLCJyZXhwIjoxNzUzOTY0NzI5LCJ2ZXIiOiIzLjAiLCJhaWQiOiJ1ZmVkODY5YmMxMTA1YWVkZDMzMTY2NWQ1N2NlYTQwN2QiLCJsc2lkIjoiMGUyYzIyYWMtYmU3Yy00YTY0LTg2ZGItYzJkNDIzY2VkNTQwIiwiZGlkIjoiTk9ORSIsImN0eXBlIjoiREVTS1RPUF9NQUMiLCJjbW9kZSI6IlNFQ09OREFSWSIsImNpZCI6IjAxMDAwMDAwMDAifQ.JN3Q2MeoZwEYwvYryymiSFgkGD8RGjgwLKpZiP_MgjE",
+        "certificate": "b94016ced76d63b3c0da47e8cb51e58e0bf6e982be57e9de21f0f0530d24f883",
+        "e2eeVersion": "1",
+        "keyId": "4869324",
+        "privKey": "4MctBnCsF7lzvPY587Ar0B8+KwlWRpLV15CGaeJPtE0=",
+        "pubKey": "dId6SdQAnP1JdIDRcjFV+a45DR6662XdS1tkRaUZBFk=",
+        "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhMDY4YjVjMi01MDE0LTQ2MjgtYmQ3NS03ZmZkYmMyYjc2ZGQiLCJhdGkiOiI2ZWVhMzM5Mi1hOGNiLTRiZGUtOTQ1Yy0yZWIzODhhYWE2NTgiLCJhdWQiOiJMSU5FIiwicm90IjoiU1RBVElDIiwiaWF0IjoxNzIyNDI4NzI5LCJleHAiOjE3NTM5NjQ3MjksInNjcCI6IkxJTkVfQ09SRSIsInZlciI6IjMuMCIsImFpZCI6InVmZWQ4NjliYzExMDVhZWRkMzMxNjY1ZDU3Y2VhNDA3ZCIsImxzaWQiOiIwZTJjMjJhYy1iZTdjLTRhNjQtODZkYi1jMmQ0MjNjZWQ1NDAiLCJkaWQiOiJOT05FIiwiYXBwSWQiOiIwMTAwMDAwMDAwIn0.aQtA12ELks3vsJx1U0K8yJ7s6HhhD6fYjQKUXz4zQLc"
+    },
+    "status": 200
 }
 
