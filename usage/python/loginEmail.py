@@ -15,6 +15,10 @@ def getProxies():
        return random.choice(proxies).split(':')[0]
     return None
 
+
+# please enabled login using password before you do this
+# go settings > Account on your LINE app!
+
 def loginEmail():
     url = f'{base_url}/loginemail'
     url2 = f'{base_url}/reqemailtoken'
