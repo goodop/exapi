@@ -1,4 +1,6 @@
 from exapi import ExecrossAPI
+import json
+
 api = ExecrossAPI(base_url='https://execross.com/api/v3', apikey='forexecman')
 
 # Example 1: LINE Login QR Token V3
