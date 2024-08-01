@@ -15,9 +15,24 @@ def getProxies():
        return random.choice(proxies).split(':')[0]
     return None
 
+"""
+Change the endpoint with the login email version you want:
 
+# LOGIN EMAIL With Authtoken V3
+url = f'{base_url}/loginqr'
+url2 = f'{base_url}/reqpin'
+url3 = f'{base_url}/reqtoken'
+
+# LOGIN EMAILV1
+url = f'{base_url}/loginqrv1'
+url2 = f'{base_url}/reqpinv1'
+url3 = f'{base_url}/reqtokenv1'
+
+NOTE:
 # please enabled login using password before you do this
 # go settings > Account on your LINE app!
+
+"""
 
 def loginEmail():
     url = f'{base_url}/loginemail'
@@ -66,6 +81,7 @@ def loginEmail():
 
 loginEmail()
 
+"""
 # Result will be:
 
 Response:  {
@@ -92,3 +108,4 @@ Response2:  {
     },
     "status": 200
 }
+"""
