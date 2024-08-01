@@ -7,6 +7,27 @@ apikey = 'forexecman'
 session = requests.Session()
 session.headers.update({'apikey': apikey, 'Content-Type': 'application/json'})
 
+"""
+Change the endpoint with the login QR version you want:
+
+# LOGIN QR With Authtoken V3
+url = f'{base_url}/loginqr'
+url2 = f'{base_url}/reqpin'
+url3 = f'{base_url}/reqtoken'
+Note: IPAD appname failed to get token.
+
+# LOGIN QRV1
+url = f'{base_url}/loginqrv1'
+url2 = f'{base_url}/reqpinv1'
+url3 = f'{base_url}/reqtokenv1'
+
+# LOGIN QR SECURE
+url = f'{base_url}/loginqrv3'
+url2 = f'{base_url}/reqpinv3'
+url3 = f'{base_url}/reqtokenv3'
+Note: IPAD appname failed to get token.
+"""
+
 def getProxies():
     endpoint = f'{base_url}/proxies'
     response = session.get(endpoint).json()
