@@ -198,3 +198,11 @@ params_fbpost = {
 data = api.downloadFacebook(params_fbpost)
 print(data)
 
+# Example 21: Download Tiktok Post"
+params_tiktok = {
+    'apikey': api.apikey,
+    'url': 'https://www.tiktok.com/@islamicvibes1445/video/7367927569280240901?_r=1&_t=8oUDV5F4HtB'
+}
+data = api.downloadTiktok(params_tiktok)
+siap = json.dumps(data,indent=4)
+print(siap)
