@@ -23,7 +23,7 @@ Respon Will be:
 
 Response:  {
     "creator": "EXECROSS",
-    "ip": "45.77.252.122",
+    "ip": "46.27.15.132",
     "result": {
         "ai_dynamic_cover": "https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/2e21a623eea44d4e8a86beacbfa29eb6_1715479326?lk3s=d05b14bd&nonce=32604&refresh_token=bd73c5e62b92a3bba10f92ad845450ee&x-expires=1722610800&x-signature=j6STbKhOXsadsR2I2lZm9z6EtcY%3D&s=AWEME_DETAIL&se=false&sh=&sc=dynamic_cover&l=20240801155329945CC0CB7B84FF1A4ABE&shp=d05b14bd&shcp=-",
         "anchors": null,
