@@ -75,8 +75,8 @@ def getQR():
 
 getQR()
 
+"""
 # Response will be:
-
 Response:  {
     "creator": "EXECROSS",
     "ip": "56.77.752.122",
@@ -112,4 +112,4 @@ response3:  {
     },
     "status": 200
 }
-
+"""
