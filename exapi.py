@@ -161,3 +161,8 @@ class ExecrossAPI:
         url = f'{self.base_url}/facebookdl'
         response = self.session.get(url, params=params).json()
         return response
+
+    def downloadTiktok(self,params):
+        url = f'{self.base_url}/tiktokdl'
+        response = self.session.get(url, params=params).json()
+        return response
