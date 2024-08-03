@@ -98,7 +98,7 @@ exampleAddFriendSecondary()
 ```
 More example: [visit here](https://github.com/goodop/exapi/tree/main/usage/python)
 
-### Example 3: JavaSript Fetch
+### Example 3: JavaScript Fetch
 
 To make fetch ExecrossAPI using javascript you must install node on your system. for detail please read the [instruction](https://github.com/goodop/exapi/blob/main/usage/javascript/README.md).
 
