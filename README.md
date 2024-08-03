@@ -12,7 +12,7 @@ Exapi or Execross API is an API library designed for Line Messenger and social m
   - [Example 3: Javascript Request](https://github.com/goodop/exapi/tree/main/usage/javascript)
 - [Contributing](README.md#contributing)
 - [License](README.md#license)
-
+- [Endpoint](README.md#Endpoints)
 ## Installation
 
 Clone this repository and install the required dependencies:
@@ -133,7 +133,7 @@ Feel free to [open issues](https://github.com/goodop/exapi/issues) or submit pul
 This project is licensed under the MIT License - see the  [LICENSE](LICENSE) file for details.
 
 
-## Endpoints and Parameters
+## Endpoints
 
 Host:
 ```bash
