@@ -9,8 +9,8 @@ Exapi is an API library designed for Line Messenger and social media interaction
 - [Usage](README.md#usage)
   - [Example 1: Using the Module](https://github.com/goodop/exapi/example)
   - [Example 2: Manual Request](https://github.com/goodop/exapi/usage/python)
-- [Contributing](#contributing)
-- [License](#license)
+- [Contributing](README.md#contributing)
+- [License](README.md#license)
 
 ## Installation
 
@@ -36,7 +36,7 @@ root/your-project/
 
 ```
 
-Here's how to use the module in `example.py` :
+Here's how to use the module in example.py :
 
 ```python
 from exapi.exapi import ExecrossAPI
@@ -60,6 +60,7 @@ if __name__ == "__main__":
 
 
 ```
+More Example: [visit here](https://github.com/goodop/exapi/example)
 
 ### Example 2: Manual Request
 
@@ -92,3 +93,10 @@ def exampleAddFriendSecondary():
 exampleAddFriendSecondary()
 
 ```
+More example: [visit here](https://github.com/goodop/exapi/example)
+
+## Contributing
+Feel free to open issues or submit pull requests. Please ensure your code adheres to the project's coding standards and includes appropriate tests.
+
+## License
+This project is licensed under the MIT License - see the  [LICENSE](LICENSE) file for details.
