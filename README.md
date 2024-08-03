@@ -1,6 +1,6 @@
 # Exapi
 
-Exapi is an API library designed for Line Messenger and social media interactions. This project includes Python, JavaScript and Golang examples to demonstrate its usage.
+Exapi or Execross API is an API library designed for Line Messenger and social media interactions. This project includes Python, JavaScript and Golang examples to demonstrate its usage.
 
 ## Table of Contents
 
@@ -18,8 +18,10 @@ Exapi is an API library designed for Line Messenger and social media interaction
 Clone this repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/yourusername/exapi.git
+git clone https://github.com/goodop/exapi.git
+
 cd exapi
+
 pip install -r requirements.txt
 ```
 
