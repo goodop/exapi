@@ -63,7 +63,7 @@ if __name__ == "__main__":
 
 
 ```
-More Example: [visit here](https://github.com/goodop/exapi/example)
+More Example: [visit here](https://github.com/goodop/exapi/blob/main/examples.py)
 
 ### Example 2: Manual Request
 
@@ -96,7 +96,33 @@ def exampleAddFriendSecondary():
 exampleAddFriendSecondary()
 
 ```
-More example: [visit here](https://github.com/goodop/exapi/example)
+More example: [visit here](https://github.com/goodop/exapi/tree/main/usage/python)
+
+### Example 3: JavaSript Fetch
+
+To make fetch ExecrossAPI using javascript you must install node on your system. for detail please read the [instruction](https://github.com/goodop/exapi/blob/main/usage/javascript/README.md)
+
+```javascript
+const ExecrossAPI = require('./exapi');
+
+const api = new ExecrossAPI();
+
+async function main() {
+    try {
+        const tiktokParams = { url: 'https://vt.tiktok.com/ZSYwxGV9P/' };
+        const tiktokVideo = await api.downloadTiktok(tiktokParams);
+        
+        if (tiktokVideo.error) {
+            console.error('Error:', tiktokVideo.error);
+        } else {
+            console.log('TikTok Video:', tiktokVideo.data);
+        }
+    } catch (error) {
+        console.error('Unexpected Error:', error);
+    }
+}
+```
+more example: [visit here](https://github.com/goodop/exapi/tree/main/usage/javascript)
 
 ## Contributing
 Feel free to [open issues](https://github.com/goodop/exapi/issues) or submit pull requests. Please ensure your code adheres to the project's coding standards and includes appropriate tests.
