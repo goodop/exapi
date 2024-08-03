@@ -9,6 +9,7 @@ Exapi is an API library designed for Line Messenger and social media interaction
 - [Usage](README.md#usage)
   - [Example 1: Using the Module](https://github.com/goodop/exapi/example)
   - [Example 2: Manual Request](https://github.com/goodop/exapi/usage/python)
+  - [Example 3: Javascript Request](https://github.com/goodop/exapi/usage/javascript)
 - [Contributing](README.md#contributing)
 - [License](README.md#license)
 
