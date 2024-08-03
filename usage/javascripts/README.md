@@ -31,7 +31,7 @@ Ensure Node.js and npm are installed correctly
 
 ```bas
 node -v
-
+#or
 npm -v
 ```
 
@@ -44,7 +44,7 @@ git clone https://github.com/goodop/exapi.git
 
 ### Navigate to the Project Directory
 
-Change to the directory where the project is located:
+Change to the directory where the exapiJs is located:
 
 
 ```bash
