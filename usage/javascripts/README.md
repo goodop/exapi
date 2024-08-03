@@ -31,7 +31,9 @@ Ensure Node.js and npm are installed correctly
 
 ```bas
 node -v
+
 #or
+
 npm -v
 ```
 
