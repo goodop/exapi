@@ -100,7 +100,9 @@ More example: [visit here](https://github.com/goodop/exapi/tree/main/usage/pytho
 
 ### Example 3: JavaSript Fetch
 
-To make fetch ExecrossAPI using javascript you must install node on your system. for detail please read the [instruction](https://github.com/goodop/exapi/blob/main/usage/javascript/README.md)
+To make fetch ExecrossAPI using javascript you must install node on your system. for detail please read the [instruction](https://github.com/goodop/exapi/blob/main/usage/javascript/README.md).
+
+Here’s an example:
 
 ```javascript
 const ExecrossAPI = require('./exapi');
