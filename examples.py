@@ -176,7 +176,7 @@ params_instastorie = {
 data = api.instaStory(params_instastorie)
 print(data)
 
-# Example 18: View Instagram Stalker
+# Example 18: View Who Stalk Your Instagram
 params_instastorie = {
     'apikey': api.apikey,
     'userid': 'this.ang'
@@ -184,7 +184,16 @@ params_instastorie = {
 data = api.instaStalker(params_instastorie)
 print(data)
 
-# Example 19: Download Twitter/X Post
+# Example 19: Fetch Instagram Profile Details
+params_igprofile = {
+    'apikey': api.apikey,
+    'userid': 'this.ang'
+}
+data = api.instagramProfileDetails(params_igprofile)
+siap = json.dumps(data,indent=4)
+print(siap)
+
+# Example 20: Download Twitter/X Post
 params_twitterpost = {
     'apikey': api.apikey,
     'url': 'https://x.com/NASA/status/1816862466816496101?t=VAW_bUjPQgCKbxqrovVa6A&s=19'
@@ -192,7 +201,7 @@ params_twitterpost = {
 data = api.downloadXpost(params_twitterpost)
 print(data)
 
-# Example 20: Download Facebook Post
+# Example 21: Download Facebook Post
 params_fbpost = {
     'apikey': api.apikey,
     'url': 'https://www.facebook.com/share/r/aYSqb2vVTUrRqaTG/?mibextid=0VwfS7'
@@ -200,7 +209,7 @@ params_fbpost = {
 data = api.downloadFacebook(params_fbpost)
 print(data)
 
-# Example 21: Download Tiktok Post"
+# Example 22: Download Tiktok Post"
 params_tiktok = {
     'apikey': api.apikey,
     'url': 'https://www.tiktok.com/@islamicvibes1445/video/7367927569280240901?_r=1&_t=8oUDV5F4HtB'
