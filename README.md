@@ -96,7 +96,7 @@ exampleAddFriendSecondary()
 More example: [visit here](https://github.com/goodop/exapi/example)
 
 ## Contributing
-Feel free to open issues or submit pull requests. Please ensure your code adheres to the project's coding standards and includes appropriate tests.
+Feel free to [open issues](https://github.com/goodop/exapi/issues) or submit pull requests. Please ensure your code adheres to the project's coding standards and includes appropriate tests.
 
 ## License
 This project is licensed under the MIT License - see the  [LICENSE](LICENSE) file for details.
