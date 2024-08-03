@@ -80,6 +80,6 @@ node tiktokDownload.js
 
 ```
 
-## 4. ENDPOINT AVAILABLE
+## 4. Endpoint Available
 
 You can follow this [Documentation](https://github.com/goodop/exapi/blob/main/README.md#Endpoints)
