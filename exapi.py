@@ -152,6 +152,11 @@ class ExecrossAPI:
         response = self.session.get(url, params=params).json()
         return response
 
+    def instagramProfileDetails(self,params):
+        url = f"{self.base_url}/instaprofiledetails"
+        response = self.session.get(url, params=params).json()
+        return response
+
     def downloadXpost(self,params): #Twitter
         url = f'{self.base_url}/getxpost'
         response = self.session.get(url, params=params).json()
