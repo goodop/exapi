@@ -82,4 +82,4 @@ node tiktokDownload.js
 
 ## 4. ENDPOINT AVAILABLE
 
-You can follow this [Documentation](https://github.com/goodop/README.md#Endpoints)
+You can follow this [Documentation](README.md#Endpoints)
