@@ -80,3 +80,6 @@ node tiktokDownload.js
 
 ```
 
+## 4. ENDPOINT AVAILABLE
+
+You can follow from python endpoint and paramater usage [here](https://github.com/goodop/exapi/blob/main/examples.py)
