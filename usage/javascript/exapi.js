@@ -3,7 +3,7 @@ const fetch = require('node-fetch')
 class ExecrossAPI {
     constructor(base_url, apikey) {
         this.base_url = 'https://execross.com/api/v3';
-        this.apikey = 'forexecm';
+        this.apikey = 'forexecman';
 
     }
 

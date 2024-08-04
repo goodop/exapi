@@ -133,7 +133,7 @@ class ExecrossAPI:
         return response
 
     def smulePost(self, params):
-        url = f'{self.base_url}/smulepost'
+        url = f'{self.base_url}/smuledl'
         response = self.session.get(url, params=params).json()
         return response
 
@@ -158,7 +158,7 @@ class ExecrossAPI:
         return response
 
     def downloadXpost(self,params): #Twitter
-        url = f'{self.base_url}/getxpost'
+        url = f'{self.base_url}/twitterdl'
         response = self.session.get(url, params=params).json()
         return response
 
