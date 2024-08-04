@@ -339,7 +339,7 @@ https://execross.com/api/v3
     </tr>
     <tr>
       <td style="padding: 8px;">21</td>
-      <td style="padding: 8px;">/smulepost</td>
+      <td style="padding: 8px;">/smuledl</td>
       <td style="padding: 8px;">
         - apikey<br>
         - url
@@ -379,7 +379,7 @@ https://execross.com/api/v3
     </tr>
     <tr>
       <td style="padding: 8px;">26</td>
-      <td style="padding: 8px;">/getxpost</td>
+      <td style="padding: 8px;">/twitterdl</td>
       <td style="padding: 8px;">
         - apikey<br>
         - url
