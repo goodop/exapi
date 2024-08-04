@@ -156,7 +156,7 @@ class ExecrossAPI {
     }
 
     async smuledl(params) {
-        return await this.makeRequest('/smulepost', params);
+        return await this.makeRequest('/smuledl', params);
     }
 
     async instagramPost(params) {
@@ -176,7 +176,7 @@ class ExecrossAPI {
     }
 
     async downloadXpost(params) {
-        return await this.makeRequest('/getxpost', params);
+        return await this.makeRequest('/twitterdl', params);
     }
 
     async downloadFacebook(params) {
