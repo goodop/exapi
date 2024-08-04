@@ -185,35 +185,35 @@ data = api.instaStalker(params_instastorie)
 print(data)
 
 # Example 19: Fetch Instagram Profile Details
-# params_igprofile = {
-#     'apikey': api.apikey,
-#     'userid': 'this.ang'
-# }
-# data = api.instagramProfileDetails(params_igprofile)
-# siap = json.dumps(data,indent=4)
-# print(siap)
+params_igprofile = {
+    'apikey': api.apikey,
+    'userid': 'this.ang'
+}
+data = api.instagramProfileDetails(params_igprofile)
+siap = json.dumps(data,indent=4)
+print(siap)
 
-# # Example 20: Download Twitter/X Post
-# params_twitterpost = {
-#     'apikey': api.apikey,
-#     'url': 'https://x.com/NASA/status/1816862466816496101?t=VAW_bUjPQgCKbxqrovVa6A&s=19'
-# }
-# data = api.downloadXpost(params_twitterpost)
-# print(data)
+# Example 20: Download Twitter/X Post
+params_twitterpost = {
+    'apikey': api.apikey,
+    'url': 'https://x.com/NASA/status/1816862466816496101?t=VAW_bUjPQgCKbxqrovVa6A&s=19'
+}
+data = api.downloadXpost(params_twitterpost)
+print(data)
 
-# # Example 21: Download Facebook Post
-# params_fbpost = {
-#     'apikey': api.apikey,
-#     'url': 'https://www.facebook.com/share/r/aYSqb2vVTUrRqaTG/?mibextid=0VwfS7'
-# }
-# data = api.downloadFacebook(params_fbpost)
-# print(data)
+# Example 21: Download Facebook Post
+params_fbpost = {
+    'apikey': api.apikey,
+    'url': 'https://www.facebook.com/share/r/aYSqb2vVTUrRqaTG/?mibextid=0VwfS7'
+}
+data = api.downloadFacebook(params_fbpost)
+print(data)
 
-# # Example 22: Download Tiktok Post
-# params_tiktok = {
-#     'apikey': api.apikey,
-#     'url': 'https://www.tiktok.com/@islamicvibes1445/video/7367927569280240901?_r=1&_t=8oUDV5F4HtB'
-# }
-# data = api.downloadTiktok(params_tiktok)
-# siap = json.dumps(data,indent=4)
-# print(siap)
+# Example 22: Download Tiktok Post
+params_tiktok = {
+    'apikey': api.apikey,
+    'url': 'https://www.tiktok.com/@islamicvibes1445/video/7367927569280240901?_r=1&_t=8oUDV5F4HtB'
+}
+data = api.downloadTiktok(params_tiktok)
+siap = json.dumps(data,indent=4)
+print(siap)
