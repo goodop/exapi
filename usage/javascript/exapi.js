@@ -155,7 +155,7 @@ class ExecrossAPI {
         return await this.makeRequest('/video2apng', params);
     }
 
-    async smuledl(params) {
+    async downloadSmule(params) {
         return await this.makeRequest('/smuledl', params);
     }
 
