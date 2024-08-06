@@ -12,7 +12,6 @@ files = [
     ('images', ('image2.jpg', open('assets/th.jpeg', 'rb'), 'image/jpeg'))
 ]
 
-
 """
 # If want empty files and use only url
 
@@ -34,12 +33,12 @@ data = {
     'urls': json.dumps([])
 }
 """
-print(data)
+saveimageAs = "assets/combined_img.jpg"
 response = session.post(f"{base_url}/combine", files=files, data={'urls': data['urls']})
 if response.status_code == 200:
-    with open('combinedImage.jpg', 'wb') as f:
+    with open(f'{saveimageAs}', 'wb') as f:
         f.write(response.content)
-    print('Image successfully saved as combinedImage.jpg')
+    print(f'Image successfully saved as: {saveimageAs}')
 else:
     print(f'Failed to combine images. Status code: {response.status_code}')
     print(response.text)

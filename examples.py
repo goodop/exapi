@@ -246,6 +246,6 @@ data = {
         'https://img.freepik.com/premium-photo/3d-rendering-arabian-cobra-animal-ai-generative_842224-8185.jpg'
     ])
 }
-
-result = api.combineImages(files, data)
+filenamed = "usage/python/assets/combined.jpg" #save and renamed image result
+result = api.combineImages(filenamed, files, data)
 print(result)

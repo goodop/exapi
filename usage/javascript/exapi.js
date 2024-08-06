@@ -191,7 +191,7 @@ class ExecrossAPI {
         return await this.makeRequest('/tiktokdl', params);
     }
 
-    async uploadImages(filePaths, urls) {
+    async combineImages(imgPath, filePaths, urls) {
         const url = '/combine';
         const form = new FormData();
         filePaths.forEach(filePath => {
@@ -226,12 +226,10 @@ class ExecrossAPI {
                     };
                 } else if (contentType.includes('image/')) {
                     const buffer = await response.buffer();
-                    const pathLocation = "utils" // Change with path where you want save the images
-                    const fileSaved = "combined_image.jpg" 
-                    fs.writeFileSync(`${pathLocation}/${fileSaved}`, buffer); 
+                    fs.writeFileSync(`${imgPath}`, buffer); 
                     return {
                         status: response.status,
-                        message: `Image successfully saved at: ${pathLocation}\nName: ${fileSaved}`
+                        message: `Image successfully saved at: ${imgPath}`
                     };
                 } else {
                     const text = await response.text();

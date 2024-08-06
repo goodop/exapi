@@ -178,13 +178,13 @@ class ExecrossAPI:
         response = self.session.get(url, params=params).json()
         return response
 
-    def combineImages(self, files, data):
+    def combineImages(self,filenamed, files, data):
         url = f'{self.base_url}/combine'
         headers= {"apikey": self.apikey}
         response = requests.post(url, headers=headers, files=files, data={'urls': data['urls']})
         if response.status_code == 200:
-            with open('combinedImage.jpg', 'wb') as f:
+            with open(f'{filenamed}', 'wb') as f:
                 f.write(response.content)
-            return f"Image successfully saved to: combinedImage.jpg"
+            return f"Image successfully saved to: {filenamed}"
         else:
             return f"Failed to save image. Status code: {response.status_code}, Response: {response.text}"
