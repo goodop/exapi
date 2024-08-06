@@ -1,4 +1,8 @@
-const fetch = require('node-fetch')
+const fs = require('fs');
+const path = require('path');
+const FormData = require('form-data');
+const fetch = require('node-fetch');
+
 
 class ExecrossAPI {
     constructor(base_url, apikey) {
@@ -7,12 +11,12 @@ class ExecrossAPI {
 
     }
 
-    async makeRequest(url, params = {}) {
+    async makeRequest(url, params = {}, method = 'GET') {
         try {
             const queryString = new URLSearchParams(params).toString();
             const fullUrl = `${this.base_url}${url}?${queryString}`;
             const response = await fetch(fullUrl, {
-                method: 'GET',
+                method: method,
                 headers: {
                     'apikey': this.apikey,
                     'Content-Type': 'application/json'
@@ -185,6 +189,73 @@ class ExecrossAPI {
 
     async downloadTiktok(params) {
         return await this.makeRequest('/tiktokdl', params);
+    }
+
+    async uploadImages(filePaths, urls) {
+        const url = '/combine';
+        const form = new FormData();
+        filePaths.forEach(filePath => {
+            if (!fs.existsSync(filePath)) {
+                console.error(`File not found: ${filePath}`);
+                return;
+            }
+            
+            form.append('images', fs.createReadStream(filePath), {
+                filename: path.basename(filePath),
+                contentType: 'image/jpeg'
+            });
+        });
+        form.append('urls', JSON.stringify(urls));
+        try {
+            const response = await fetch(`${this.base_url}${url}`, {
+                method: 'POST',
+                headers: {
+                    'apikey': this.apikey,
+                    ...form.getHeaders()
+                },
+                body: form
+            });
+            const contentType = response.headers.get('content-type');
+            if (response.ok) {
+                if (contentType.includes('application/json')) {
+                    const result = await response.json();
+                    return {
+                        status: response.status,
+                        message: 'Images successfully uploaded',
+                        data: result
+                    };
+                } else if (contentType.includes('image/')) {
+                    const buffer = await response.buffer();
+                    const pathLocation = "utils" // Change with path where you want save the images
+                    const fileSaved = "combined_image.jpg" 
+                    fs.writeFileSync(`${pathLocation}/${fileSaved}`, buffer); 
+                    return {
+                        status: response.status,
+                        message: `Image successfully saved at: ${pathLocation}\nName: ${fileSaved}`
+                    };
+                } else {
+                    const text = await response.text();
+                    return {
+                        status: response.status,
+                        message: 'Received unexpected content type',
+                        data: text
+                    };
+                }
+            } else {
+                const errorText = await response.text();
+                return {
+                    status: response.status,
+                    message: `Failed to upload images. Status code: ${response.status}`,
+                    error: errorText
+                };
+            }
+        } catch (error) {
+            return {
+                status: 500,
+                message: 'Error occurred during the request',
+                error: error.message
+            };
+        }
     }
 }
 

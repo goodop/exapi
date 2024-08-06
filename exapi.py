@@ -92,6 +92,12 @@ class ExecrossAPI:
         response = self.session.get(url, params=params).json()
         return response
 
+    def lineAppname(self):
+        url = f'{self.base_url}/appnames'
+        response = self.session.get(url).json()
+        if response['status'] == 200:
+           return response['result']['appNames']
+
     def getStory(self, params):
         url = f'{self.base_url}/linestory'
         response = self.session.get(url, params=params).json()
@@ -100,7 +106,7 @@ class ExecrossAPI:
     def getPost(self, params):
         url = f'{self.base_url}/linepost'
         response = self.session.get(url, params=params).json()
-        return response
+        return response 
 
     def friendRecomendation(self, params):
         url = f'{self.base_url}/friendrecomendation'
@@ -171,3 +177,14 @@ class ExecrossAPI:
         url = f'{self.base_url}/tiktokdl'
         response = self.session.get(url, params=params).json()
         return response
+
+    def combineImages(self, files, data):
+        url = f'{self.base_url}/combine'
+        headers= {"apikey": self.apikey}
+        response = requests.post(url, headers=headers, files=files, data={'urls': data['urls']})
+        if response.status_code == 200:
+            with open('combinedImage.jpg', 'wb') as f:
+                f.write(response.content)
+            return f"Image successfully saved to: combinedImage.jpg"
+        else:
+            return f"Failed to save image. Status code: {response.status_code}, Response: {response.text}"

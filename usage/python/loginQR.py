@@ -36,14 +36,22 @@ def getProxies():
        return random.choice(proxies).split(':')[0]
     return None
 
+def getAppname():
+    endpoint = f'{base_url}/appnames'
+    response = session.get(endpoint).json()
+    if response['status'] == 200:
+        return response['result']['appNames']
+
 def getQR():
     proxy = getProxies()
+    appname = getAppname()['macOS']
+    print(appname)
     url = f'{base_url}/loginqr'
     url2 = f'{base_url}/reqpin'
     url3 = f'{base_url}/reqtoken'
     params = {
         'apikey': apikey,
-        'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7',
+        'appName': appname,
         'certificate': '',
         'proxy': proxy,
     }
