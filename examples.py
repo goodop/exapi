@@ -60,7 +60,7 @@ print(data)
 params_addfriendprimary = {
     'apikey': api.apikey,
     'appName': 'ANDROID\t13.19.1\tANDROID\t12.3.3772',
-    'authToken': "uc23h7f331c8819j90fa9182db42a6e26:aWF0OiAbmkjDI5OTM2MTU2MDAK....",  # change with your primary token
+    'authToken': "uc23h7f331c8819j90fa9182db42a6e26:aWF0OiAbmkjDI5OTM2MTU....",  # change with your primary token
     'proxy': None,
     'mid': 'ufed869bc1105aedd331665d57cea407d',  # mid target
 }
