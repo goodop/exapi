@@ -188,3 +188,9 @@ class ExecrossAPI:
             return f"Image successfully saved to: {filenamed}"
         else:
             return f"Failed to save image. Status code: {response.status_code}, Response: {response.text}"
+
+    def faceSwap(self, files=None,params=None):
+        url = f'{self.base_url}/swapface'
+        headers= {"apikey": self.apikey}
+        response = requests.post(url, files=files, params=params, headers=headers)
+        return response.json()

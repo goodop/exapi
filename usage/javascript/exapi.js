@@ -255,6 +255,53 @@ class ExecrossAPI {
             };
         }
     }
+
+    async swapFaceWithURLs(params) {
+        const apiParams = {
+            originImageURL: params.originImageURL, 
+            faceImageURL: params.faceImageURL
+        };
+        return await this.makeRequest('/swapface', apiParams, 'POST');
+    }
+    
+    async swapFaceWithFiles(originImagePath, faceImagePath) {
+        const formData = new FormData();
+        formData.append('originImage', fs.readFileSync(originImagePath), 'original_image.jpg');
+        formData.append('faceImage', fs.readFileSync(faceImagePath), 'face_image.jpg');
+
+        try {
+            const fullUrl = `${this.base_url}/swapface`;
+            const response = await fetch(fullUrl, {
+                method: 'POST',
+                headers: {
+                    'apikey': this.apikey
+                },
+                body: formData
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({ message: 'Unknown error' }));
+                return {
+                    status: response.status,
+                    data: null,
+                    error: errorData
+                };
+            }
+
+            const data = await response.json();
+            return {
+                status: response.status,
+                data: data,
+                error: null
+            };
+        } catch (error) {
+            return {
+                status: 500,
+                data: null,
+                error: { message: 'Network error', details: error.message }
+            };
+        }
+    }
 }
 
 module.exports = ExecrossAPI;

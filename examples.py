@@ -249,3 +249,22 @@ data = {
 filenamed = "usage/python/assets/combined.jpg" #save and renamed image result
 result = api.combineImages(filenamed, files, data)
 print(result)
+
+# Example 26: Swap Face
+originalImage= 'https://i.ytimg.com/vi/Sw2NisGoa9c/maxres2.jpg'
+faceImage = 'https://gate.execross.com/images/ki-arjuna.webp'
+params = {
+    'originImageURL': originalImage,
+    'faceImageURL': faceImage
+}
+response = api.faceSwap(params=params)
+print(json.dumps(response,indent=4))
+
+
+files = {
+    'originImage': ('original_image.jpg', open('usage/python/assets/superman.webp', 'rb'), 'image/jpeg'),
+    'faceImage': ('original_image.jpg', open('usage/python/assets/narji.jpeg', 'rb'), 'image/jpeg')
+}
+response = api.faceSwap(files=files)
+print(json.dumps(response,indent=4))
+
