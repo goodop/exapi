@@ -3,7 +3,6 @@ import json
 
 api = ExecrossAPI(base_url='https://execross.com/api/v3', apikey='forexecman')
 
-
 # Example 1: GET Proxies
 proxy = api.getProxies()
 print(proxy)
@@ -163,10 +162,11 @@ print(data)
 # Example 17: Download smule post
 params_smuledl = {
     'apikey': api.apikey,
-    'url': 'https://www.smule.com/recording/vita-alvia-singkong-dan-keju-dj-remix/489839279_4906184190?channel=Copy-Link'
+    'url': 'https://www.smule.com/sing-recording/2732403437_4732128989'
 }
 data = api.smulePost(params_smuledl)
-print(data)
+print(json.dumps(data,indent=4))
+
 
 # Example 18: Download Instagram Post
 params_instapost = {
@@ -204,7 +204,7 @@ print(siap)
 # Example 22: Download Twitter/X Post
 params_twitterpost = {
     'apikey': api.apikey,
-    'url': 'https://x.com/NASA/status/1816862466816496101?t=VAW_bUjPQgCKbxqrovVa6A&s=19'
+    'url': 'https://twitter.com/koreanjewcrypto/status/1544681312941924352?s=20&t=7Jpn1Shcn6Kl5DG-bPzosQ'
 }
 data = api.downloadXpost(params_twitterpost)
 print(data)
@@ -251,6 +251,8 @@ result = api.combineImages(filenamed, files, data)
 print(result)
 
 # Example 26: Swap Face
+
+# Example With URL
 originalImage= 'https://i.ytimg.com/vi/Sw2NisGoa9c/maxres2.jpg'
 faceImage = 'https://gate.execross.com/images/ki-arjuna.webp'
 params = {
@@ -260,7 +262,7 @@ params = {
 response = api.faceSwap(params=params)
 print(json.dumps(response,indent=4))
 
-
+# Example With Files
 files = {
     'originImage': ('original_image.jpg', open('usage/python/assets/superman.webp', 'rb'), 'image/jpeg'),
     'faceImage': ('original_image.jpg', open('usage/python/assets/narji.jpeg', 'rb'), 'image/jpeg')
@@ -268,3 +270,10 @@ files = {
 response = api.faceSwap(files=files)
 print(json.dumps(response,indent=4))
 
+# Example 17: Smule Profile
+params_smuleProfile = {
+    'apikey': api.apikey,
+    'userId': 'NabilaNova'
+}
+data = api.smuleProfile(params_smuleProfile)
+print(json.dumps(data,indent=4))

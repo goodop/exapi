@@ -140,7 +140,12 @@ class ExecrossAPI:
 
     def smulePost(self, params):
         url = f'{self.base_url}/smuledl'
-        response = self.session.get(url, params=params).json()
+        response = requests.get(url, params=params).json()
+        return response
+
+    def smuleProfile(self, params):
+        url = f'{self.base_url}/smuleprofile'
+        response = requests.get(url, params=params).json()
         return response
 
     def instagramPost(self, params):
