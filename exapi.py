@@ -209,3 +209,18 @@ class ExecrossAPI:
         headers= {"apikey": self.apikey}
         response = requests.post(url, files=files, params=params, headers=headers)
         return response.json()
+
+    def youtubedl(self,params):
+        url = f'{self.base_url}/youtubedl'
+        response = self.session.get(url, params=params).json()
+        return response
+
+    def youtubeQuery(self,params):
+        url = f'{self.base_url}/youtubequery'
+        response = self.session.get(url, params=params).json()
+        return response
+
+    def youtubeTrendingVideo(self,params):
+        url = f'{self.base_url}/ytvideotrend'
+        response = self.session.get(url, params=params).json()
+        return response

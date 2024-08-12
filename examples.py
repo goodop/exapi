@@ -289,3 +289,26 @@ params_tiktokProfile = {
 }
 data = api.tiktokProfile(params_tweetProfile)
 print(json.dumps(data,indent=4))
+
+# Example 30: Youtube Downloader
+youtubedl = {
+    "url": "https://youtu.be/_mp547ErQuw?si=wn9Obdk4WaT_c5Qo",  # support all youtube urls included short
+}
+data = api.youtubedl(youtubedl)
+print(json.dumps(data,indent=4))
+
+# Example 30: Youtube Downloader By Query
+youtubeQuery = {
+    "query": "Pupus Dewa 19",
+}
+data = api.youtubeQuery(youtubeQuery)
+print(json.dumps(data,indent=4))
+
+
+# Example 30: Youtube Trending Video
+ytVideoTrend = {
+    "region" : "ID",
+    "countResult": 15 , # max 25, default 10
+}
+data = api.youtubeTrendingVideo(ytVideoTrend)
+print(json.dumps(data,indent=4))
