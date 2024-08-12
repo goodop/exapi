@@ -219,16 +219,6 @@ print(data)
 
 # Example 24: Download Tiktok Post
 params_tiktok = {
-    'apikey': api.apikey,
-    'url': 'https://www.tiktok.com/@islamicvibes1445/video/7367927569280240901?_r=1&_t=8oUDV5F4HtB'
-}
-data = api.downloadTiktok(params_tiktok)
-siap = json.dumps(data,indent=4)
-print(siap)
-
-
-# Example 24: Download Tiktok Post
-params_tiktok = {
     'url': 'https://www.tiktok.com/@islamicvibes1445/video/7367927569280240901?_r=1&_t=8oUDV5F4HtB'
 }
 data = api.downloadTiktok(params_tiktok)
@@ -236,10 +226,14 @@ siap = json.dumps(data,indent=4)
 print(siap)
 
 # Example 25: Combine Images
+
+# Use Files
 files = [
     ('images', ('image1.jpg', open('usage/python/assets/cobrax.jpg', 'rb'), 'image/jpeg')),
     ('images', ('image2.jpg', open('usage/python/assets/th.jpeg', 'rb'), 'image/jpeg'))
 ]
+
+# Use URL
 data = {
     'urls': json.dumps([
         'https://images.nightcafe.studio/jobs/g9k7ET6X4eTnJMIASD9Q/g9k7ET6X4eTnJMIASD9Q--1--83vb5.jpg',
@@ -270,10 +264,28 @@ files = {
 response = api.faceSwap(files=files)
 print(json.dumps(response,indent=4))
 
-# Example 17: Smule Profile
+
+# Example 27: Smule Profile
 params_smuleProfile = {
     'apikey': api.apikey,
     'userId': 'NabilaNova'
 }
 data = api.smuleProfile(params_smuleProfile)
+print(json.dumps(data,indent=4))
+
+
+# Example 28: Tweet Profile
+params_tweetProfile = {
+    'apikey': api.apikey,
+    'userId': '0xagx'
+}
+data = api.tweetProfile(params_tweetProfile)
+print(json.dumps(data,indent=4))
+
+# Example 29: Tiktok Profile
+params_tiktokProfile = {
+    'apikey': api.apikey,
+    'userId': 'asking.ang'
+}
+data = api.tiktokProfile(params_tweetProfile)
 print(json.dumps(data,indent=4))

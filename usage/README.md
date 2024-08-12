@@ -1,6 +1,6 @@
 # API Request Examples
 
-This repository provides examples in both Python and JavaScript for making HTTP requests to an API using the provided URL and endpoint. Whether you're working with Python's requests library or JavaScript's fetch or axios, these examples will help you get started quickly.
+This examples in both Python and JavaScript for making HTTP requests to an API using the provided URL and endpoint. Whether you're working with Python's requests library or JavaScript's fetch or axios, these examples will help you get started quickly.
 
 ## Python Example
 In the Python example, we use the requests library to send a GET request to the API. The example demonstrates how to structure the request with the necessary headers and parameters.

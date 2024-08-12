@@ -173,6 +173,11 @@ class ExecrossAPI:
         response = self.session.get(url, params=params).json()
         return response
 
+    def tweetProfile(self, params):
+        url = f'{self.base_url}/tweetprofile'
+        response = requests.get(url, params=params).json()
+        return response
+
     def downloadFacebook(self,params):
         url = f'{self.base_url}/facebookdl'
         response = self.session.get(url, params=params).json()
@@ -180,6 +185,11 @@ class ExecrossAPI:
 
     def downloadTiktok(self,params):
         url = f'{self.base_url}/tiktokdl'
+        response = self.session.get(url, params=params).json()
+        return response
+
+    def tiktokProfile(self,params):
+        url = f'{self.base_url}/tiktokprofile'
         response = self.session.get(url, params=params).json()
         return response
 
