@@ -224,3 +224,13 @@ class ExecrossAPI:
         url = f'{self.base_url}/ytvideotrend'
         response = self.session.get(url, params=params).json()
         return response
+
+    def youtubeTrendingMusic(self,params):
+        url = f'{self.base_url}/ytmusictrend'
+        response = self.session.get(url, params=params).json()
+        return response
+
+    def fancy(self,params):
+        url = f'{self.base_url}/fancy'
+        response = self.session.get(url, params=params).json()
+        return response
