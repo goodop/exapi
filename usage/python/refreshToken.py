@@ -14,8 +14,8 @@ def getAppname():
         return response['result']['appNames']
 
 def refresh():
-    refresh = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9....", # Change with your refresh token
-    oldToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...." # Change with your authToken V3
+    refresh = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzODI5Mz....", # Change with your refresh token
+    oldToken= "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2NmM3ZW...." # Change with your authToken V3
     appname = getAppname()['windows'] # Appname must desktopwin or desktopmac.
     params = {
         'appName': appname,

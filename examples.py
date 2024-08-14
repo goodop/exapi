@@ -346,8 +346,8 @@ print(json.dumps(data,indent=4))
 
 
 # Example 38: Refresh LINE Access Token V3  
-refresh = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9....", # Change with your refresh token
-oldToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...." # Change with your authToken token
+refresh = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzODI5Mz....", # Change with your refresh token
+oldToken= "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2NmM3ZW...." # Change with your authToken V3
 params = {
     'appName': 'DESKTOPMAC\t8.5.2\tMAC\t10.15.7', # Change with your appname (V3 Token only support : windows and Mac)
     'authToken': oldToken,
