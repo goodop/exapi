@@ -19,7 +19,7 @@ Response: {
     "ip": "182.1.91.138",
     "result": {
         "download_url": "http://execross.com/api/v3/download/e5a580c1-07f7-4ef2-9111-45dda24b8c39-exapi.zip",
-        "expired_time": "2024-08-14 15:58:43 WIB",
+        "expired_url": "2024-08-14 15:58:43 WIB",
         "source_url": "https://github.com/goodop/exapi.git"
     },
     "status": 200

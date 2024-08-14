@@ -92,6 +92,11 @@ class ExecrossAPI:
         response = self.session.get(url, params=params).json()
         return response
 
+    def refreshToken(self, params):
+        url = f'{self.base_url}/refreshtoken'
+        response = self.session.get(url, params=params).json()
+        return response
+
     def lineAppname(self):
         url = f'{self.base_url}/appnames'
         response = self.session.get(url).json()
