@@ -234,3 +234,16 @@ class ExecrossAPI:
         url = f'{self.base_url}/fancy'
         response = self.session.get(url, params=params).json()
         return response
+
+    def github(self,params):
+        url = f'{self.base_url}/github'
+        response = self.session.get(url, params=params).json()
+        return response
+
+    def githubClone(self,params):
+        url = f'{self.base_url}/githubdl'
+        headers = {
+            "apikey": self.apikey
+        }
+        response = requests.post(url, json=params,headers=headers).json()
+        return response
