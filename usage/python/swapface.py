@@ -28,6 +28,7 @@ def faceSwapPath():
     print("Response With Path:", json.dumps(response.json(),indent=4))
 
 faceSwapURL()
+time.sleep(5)
 faceSwapPath()
 
 
