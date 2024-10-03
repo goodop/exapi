@@ -1,6 +1,6 @@
 import requests,json
 
-endpoint = 'https://execross.com/api/v3/tiktokprofile'
+endpoint = 'https://execross.com/api/v3/tiktok'
 headers = {
     'apikey': 'forexecman'
 }

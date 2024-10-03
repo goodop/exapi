@@ -7,7 +7,7 @@ session = requests.Session()
 session.headers.update({'apikey': apikey, 'Content-Type': 'application/json'})
 
 def fetIGDetails():
-    url = f"{base_url}/instaprofiledetails"
+    url = f"{base_url}/instaprofile"
     params = {
        "userid":  "this.ang"
     }

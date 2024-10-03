@@ -169,7 +169,7 @@ class ExecrossAPI:
         return response
 
     def instagramProfileDetails(self,params):
-        url = f"{self.base_url}/instaprofiledetails"
+        url = f"{self.base_url}/instaprofile"
         response = self.session.get(url, params=params).json()
         return response
 
@@ -194,7 +194,7 @@ class ExecrossAPI:
         return response
 
     def tiktokProfile(self,params):
-        url = f'{self.base_url}/tiktokprofile'
+        url = f'{self.base_url}/tiktok'
         response = self.session.get(url, params=params).json()
         return response
 
