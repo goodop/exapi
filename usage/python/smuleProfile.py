@@ -17,32 +17,21 @@ else:
 '''
 Response will be:
 
-Response : {
+Response: {
     "creator": "EXECROSS",
-    "ip": "114.125.70.230",
+    "ip": "61.5.71.228",
     "result": {
-        "profile": {
-            "account_id": 2732378204,
-            "blurb": "",
-            "followees": "116",
-            "followers": "146",
-            "handle": "SusPended404_",
-            "installed_apps": [
-                "smuledotcom",
-                "sing"
-            ],
-            "is_current_user_profile": false,
-            "is_following": false,
-            "is_verified": false,
-            "is_vip": false,
-            "location": null,
-            "num_performances": "385",
-            "pic_url": "https://c-fa.cdn.smule.com/smule-gg-uw1-z-1/account/picture/82/76/2c10c080-d113-471b-ac27-8ea331f94b53.jpg",        
-            "sfam_count": 0,
-            "url": "/SusPended404_",
-            "verified_type": "unverified",
-            "wallet": null
-        }
+        "accountId": 2732378204,
+        "biography": "",
+        "followers": "144",
+        "following": "116",
+        "location": null,
+        "pictureUrl": "https://c-fa.cdn.smule.com/smule-gg-uw1-z-1/account/picture/82/76/2c10c080-d113-471b-ac27-8ea331f94b53.jpg",
+        "profileUrl": "https://smule.com/SusPended404_",
+        "recording": "385",
+        "username": "SusPended404_",
+        "verified": false,
+        "vip": false
     },
     "status": 200
 }
