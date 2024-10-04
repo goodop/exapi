@@ -34,7 +34,7 @@ Response: {
             "album_name": "Kangen",
             "artist": "Dewa 19",
             "cover": "https://i.scdn.co/image/ab67616d0000b27370ea19fd1f517d40b9c01c0d",
-            "mp3Url": "https://cdn2.meow.gs/tunnel?id=hYmrogt-FTFIcm0JfS2OH&exp=1728051688293&sig=7ALnUtpHiSJXwJNOMzvPZAUAeov69zhzj8nlous7_38&sec=zhvoIhmzO0dHvVmMz0rqsAnU2BMvg2ecK7QMbJ-NQcQ&iv=UkiBlMDeP0Z0jAXa4CV-Sg",
+            "mp3Url": "https://gate.execross.com/audio/dad0baf3-2d5a-4e54-9336-b1776daad5dd.mp3",
             "release": "2007-12-03",
             "title": "Kangen",
             "url": "https://open.spotify.com/track/6VggIDYOnf9C8fJVcMpxAu"
@@ -58,7 +58,7 @@ Response: {
             "album_name": "Galau",
             "artist": "Mahalini",
             "cover": "https://i.scdn.co/image/ab67616d00001e026f713eb92ebf7ca05a562542",
-            "mp3Url": "https://cdn1.meow.gs/tunnel?id=hrxtyrAMxuqZAtYsZkAvc&exp=1728052053720&sig=JV5TpKDwdKSDm-ywUNpM7zAWPFvh23gjXSYWMzDO98c&sec=zE5zz3hXl9zo-rdPvn19jNRkdOWpbN0HBR7ZQBcuX64&iv=0UY8xZbk9P8GMimydCcDHA",
+            "mp3Url": "https://gate.execross.com/audio/d012a25f-afeb-4927-9aa4-735c85f330fb.mp3",
             "release": null,
             "title": "Bawa Dia Kembali",
             "url": "https://open.spotify.com/track/25M9piWxSsq0xLcjQW5yz6"
@@ -69,7 +69,7 @@ Response: {
             "album_name": "",
             "artist": "Payung Teduh",
             "cover": "",
-            "mp3Url": "https://cdn1.meow.gs/tunnel?id=3mqjgWZzLR_er68d_-q-o&exp=1728052055961&sig=bNnVDOcQNbp_VuYyVFlb2LOMMqHVP_N20wvpo-1O9zE&sec=sg3KT7axYxSQsIyfMu-MoaBRzHyxIUkkceXsIlhPobM&iv=9z7HO5w_Q5MVv__TVib5aA",
+            "mp3Url": "https://gate.execross.com/audio/003f8816-ee36-42b6-87e9-db4eabbd0816.mp3",
             "release": "2014-11-04",
             "title": "Untuk Perempuan Yang Sedang Di Pelukan",
             "url": "https://open.spotify.com/track/0urpBLpcm6DOGzs86rcKd8"
@@ -80,7 +80,7 @@ Response: {
             "album_name": "",
             "artist": "Payung Teduh",
             "cover": "",
-            "mp3Url": "https://cdn4.meow.gs/tunnel?id=cpYRKe5kwiB-vlix9peIp&exp=1728052057988&sig=hlPzSw46bHiLagFlugG3iTSl2B-O5aq5zdAEWuIvfv0&sec=mRE2f-tJYNITfTAzbMZUcRBsij7ovEdDoLP2ZRAJUxM&iv=q45rBqsjHJiv4F6OKHYtng",
+            "mp3Url": "https://gate.execross.com/audio/89aba52a-d6f9-45b1-9a40-8d372bd66854.mp3",
             "release": "2017-12-19",
             "title": "Akad",
             "url": "https://open.spotify.com/track/3AAAGS7iM1ekDywqdYMJG2"
@@ -88,5 +88,4 @@ Response: {
     ],
     "status": 200
 }
-
 """
