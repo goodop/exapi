@@ -4,7 +4,7 @@ import json
 
 url = 'https://execross.com/api/v3/bmkg'
 headers = {
-	"apikey": "partnerEXC"
+	"apikey": "forexecman"
 }
 datas = requests.get(url,headers=headers).json()
 response = json.dumps(datas,indent=4)
