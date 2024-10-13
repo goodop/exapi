@@ -14,6 +14,9 @@ response = json.dumps(datas,indent=4)
 print(response)
 
 '''
+Respon will be:
+#success (200)
+
 {
     "creator": "EXECROSS",
     "ip": "36.74.109.56",
@@ -25,5 +28,11 @@ print(response)
         "title": "Khodam anda saat ini adalah Ikan Kocak"
     },
     "status": 200
+}
+
+#Failed (503)
+{
+    "message": "Hmm, khodam Anda tampaknya masih dalam proses pengiriman spiritual. Mungkin terjebak macet di jalan raya alam gaib.",
+    "status": 503
 }
 '''
