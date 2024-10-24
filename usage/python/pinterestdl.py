@@ -14,8 +14,7 @@ response = json.dumps(datas,indent=4)
 print(response)
 
 '''
-
-#IMAGE/VIDEO RESULT
+Example IMAGE & VIDEO response:
 
 {
     "creator": "EXECROSS",
@@ -29,7 +28,7 @@ print(response)
                 "url": "https:https://v1.pinimg.com/videos/mc/720p/c0/62/89/c0628922d4c45a591ba8c211afdc157d.mp4"
             },
             {
-                "type": "image/jpg",
+                "type": "image",
                 "url": "https://i.pinimg.com/originals/d2/2f/f2/d22ff2e893e8522b2f4cd0becbb12b17.jpg"
             }
         ],
@@ -41,8 +40,7 @@ print(response)
 }
 
 
-
-# GIF RESULT
+Example GIF response:
 
 {
     "creator": "EXECROSS",
